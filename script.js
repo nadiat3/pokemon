@@ -43,9 +43,8 @@ function displayPokemon(data) {
 
     image.src = data.sprites.front_default;
 
-    if (data.cries && data.cries.latest) {
-        cry.src = data.cries.latest;
-    }
+    const cryUrl = `https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${data.id}.ogg`;
+    cry.src = cryUrl;
 
     const moves = data.moves.slice(0, 20);
 
@@ -73,4 +72,5 @@ addBtn.addEventListener("click", () => {
     `;
 
     teamList.appendChild(li);
+
 });
