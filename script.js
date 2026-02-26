@@ -74,3 +74,4 @@ addBtn.addEventListener("click", () => {
     teamList.appendChild(li);
 
 });
+
